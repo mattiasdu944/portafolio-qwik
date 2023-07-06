@@ -1,8 +1,11 @@
 import { component$ } from "@builder.io/qwik"
-import { Link } from "@builder.io/qwik-city"
+import { Link, useLocation } from "@builder.io/qwik-city"
 import { navMenu, socialNetworks } from "~/constants"
 
 export const Navbar = component$(() => {
+    
+    const { url } = useLocation();
+
     return (
         <nav class='navbar'>
             <div class="navbar__container">
@@ -18,7 +21,7 @@ export const Navbar = component$(() => {
                             <li key={ item.uri }>
                                 <Link 
                                     href={ item.uri }
-                                    // class={`${ path === item.uri && 'text-gradient'}`}
+                                    class={`${ url.pathname === item.uri && 'text-gradient'}`}
                                 >
                                     <span class='text-xl block md:hidden text-indigo-600'>
                                         { item.icon }

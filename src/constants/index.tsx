@@ -28,12 +28,12 @@ export const navMenu = [
     {
         name:'Proyectos',
         icon:<BxCategoryAlt/>,
-        uri:'/projects'
+        uri:'/projects/'
     },
     {
         name:'Contacto',
         icon:<PhChatLight/>,
-        uri:'/contact'
+        uri:'/contact/'
     },
 ]
 
