@@ -3,11 +3,19 @@ import { DocumentHead } from '@builder.io/qwik-city';
 
 export default component$(() => {
     return(
-        <>
-            <h1>Hola Mundo</h1>
+        <main class="container">
+            <section class="section">
+                <h1>
+                    <span class="text-gradient">Proyectos</span>
+                </h1>
+                <h3>Conoce mis proyectos</h3>
 
-        
-        </>
+            </section>
+
+            {
+
+            }
+        </main>
     )
 });
 

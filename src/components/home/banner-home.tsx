@@ -9,6 +9,7 @@ export const BannerHome = component$(() => {
             <div>
                 <h1 class='text-4xl md:text-6xl mb-3'>Mattias Alexandre Duarte Aparicio</h1>
                 <h1 class="text-3xl  md:text-5xl"><span class='text-gradient font-bold'>Full Stack Dev</span></h1>
+                <h3><span class='text-gradient font-bold'>CEO Innova Code</span></h3>
                 <p class='my-5'>
                     Estudiante de ingenieria en sistemas y autodidacte desde los 17 años.
                     Desarrollador desde hace 3 años especializado en web y móvil.
