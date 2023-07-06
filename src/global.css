@@ -1,23 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+@layer base {
+    h1 {
+        @apply text-6xl font-extrabold 
+    }
 
-/**
- * WHAT IS THIS FILE?
- *
- * Globally applied styles. No matter which components are in the page or matching route,
- * the styles in here will be applied to the Document, without any sort of CSS scoping.
- *
- */
-html {
-  -webkit-text-size-adjust: 100%;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    h2 {
+        @apply text-4xl font-extrabold 
+    }
+
+    h3 {
+        @apply text-2xl font-extrabold 
+    }
+
+    a {
+        @apply font-bold text-dark text-base
+    }
+    
+    li {
+        @apply text-dark text-lg
+    }
+
+    p {
+        @apply text-lg text-dark
+    }
 }
 
-body {
-  padding: 0;
-  line-height: inherit;
+@layer components {
+    .divider {
+        @apply w-full border border-gray-300
+    }
+
+    .text-gradient {
+        @apply text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary;
+    }
+
+    .button-gradient {
+        @apply bg-gradient-to-r from-primary to-secondary text-white py-2 px-5 rounded-md cursor-pointer 
+        hover:scale-105 transition-all hover:shadow-lg hover:shadow-indigo-500/70 min-w-[180px]
+        active:scale-100
+    }
+
+    .navbar {
+        @apply block fixed z-50 w-full bottom-4 md:top-0 max-h-min
+    }
+
+    .navbar h1 {
+        @apply text-2xl
+    }
+
+    .navbar__container {
+        @apply flex items-center mt-2 py-6 md:py-4 backdrop-blur-lg bg-white/60 mx-auto md:container max-w-[90%] shadow-md rounded-lg border border-gray-200 px-10
+    }
+
+    .navbar__menu{
+        @apply flex items-center gap-6 sm:gap-10 md:gap-4 mx-auto 
+    }
+
+    .navbar__menu li a{
+        @apply flex flex-col items-center justify-center text-center
+    }
+
+    .navbar__menu li a {
+        @apply hover:text-gradient hover:drop-shadow-sm
+    }
+
+    .navbar__social{
+        @apply gap-4 hidden md:flex
+    }
+
+    .navbar__social--item{
+        @apply bg-slate-100 text-lg cursor-pointer p-2 block rounded-full text-primary
+    }
+
+    .section {
+        @apply pt-10 md:pt-[6rem] max-w-[90%] mx-auto
+    }
 }

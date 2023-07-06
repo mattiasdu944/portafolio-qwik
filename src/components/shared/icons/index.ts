@@ -1,0 +1,6 @@
+export * from './bi-github'
+export * from './bi-house'
+export * from './bi-instagram'
+export * from './bi-youtube'
+export * from './bx-category-alt'
+export * from './ph-chat-light'
