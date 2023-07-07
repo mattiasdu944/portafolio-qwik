@@ -1,7 +1,23 @@
 import { component$ } from '@builder.io/qwik';
-import { DocumentHead } from '@builder.io/qwik-city';
+import { DocumentHead, routeLoader$ } from '@builder.io/qwik-city';
+import portafolioDb from '~/client/portafolioDb';
+import { ProjectsList } from '~/components';
+import { Project, ProjectsResponse } from '~/interfaces';
+
+export const useProjectsList = routeLoader$<Project[]>( async () => {
+    const { data: { data } } = await portafolioDb.get<ProjectsResponse>('/api/projects',{
+        params:{
+            populate:'*'
+        }
+    })
+    return data;
+});
+
 
 export default component$(() => {
+
+    const projects = useProjectsList();
+
     return(
         <main class="container">
             <section class="section">
@@ -12,9 +28,7 @@ export default component$(() => {
 
             </section>
 
-            {
-
-            }
+            <ProjectsList projects={ projects.value }/>
         </main>
     )
 });

@@ -1,23 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
     body {
-        font-family: 'Nunito', sans-serif;
+        font-family: 'Montserrat', sans-serif;
     }
 
     h1 {
-        @apply text-6xl font-extrabold 
+        @apply text-6xl font-bold
     }
 
     h2 {
-        @apply text-6xl font-extrabold 
+        @apply text-6xl font-bold 
     }
 
     h3 {
-        @apply text-4xl font-extrabold 
+        @apply text-4xl font-bold 
     }
 
     a {
@@ -53,15 +54,16 @@
     }
 
     .navbar {
-        @apply block fixed z-50 w-full bottom-4 md:top-0 max-h-min
+        @apply block fixed backdrop-blur-md bg-slate-50/80 z-50 w-full bottom-4 md:top-0 max-h-min
+        shadow-sm
     }
 
     .navbar h1 {
-        @apply text-2xl
+        @apply text-2xl font-extrabold
     }
 
     .navbar__container {
-        @apply flex items-center mt-2 py-6 md:py-4 backdrop-blur-md bg-white/80 mx-auto max-w-[90%] md:max-w-[75%] shadow-md rounded-lg border border-gray-100 px-10
+        @apply flex items-center mt-2 py-6 md:py-4  mx-auto max-w-[90%] md:max-w-[75%]  px-10
     }
 
     .navbar__menu{
@@ -86,5 +88,12 @@
 
     .section {
         @apply pt-10 md:pt-[6rem] pb-[2rem]
+    }
+
+    /* PROJECTS */
+    .project__card {
+        @apply border-2 rounded-md py-14 px-10 cursor-pointer hover:scale-105 hover:bg-gradient-to-r from-primary to-secondary hover:text-white
+        transition-all hover:shadow-xl hover:shadow-indigo-500/70
+        active:scale-100
     }
 }

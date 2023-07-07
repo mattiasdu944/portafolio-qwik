@@ -9,8 +9,8 @@ export const Navbar = component$(() => {
     return (
         <nav class='navbar'>
             <div class="navbar__container">
-                <h1 class='font-medium'>
-                    <span class="hidden md:block text-gradient font-semibold">
+                <h1>
+                    <span class="hidden md:block text-gradient">
                         Mattias Duarte
                     </span>
                 </h1>
