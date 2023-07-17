@@ -3,10 +3,10 @@ import type { RequestHandler } from "@builder.io/qwik-city";
  
 export const onGet: RequestHandler = async ({ cacheControl }) => {
     cacheControl({
-        public: false,
-        maxAge: 0,
-        sMaxAge: 0,
-        staleWhileRevalidate: 0,
+        public: true,
+        maxAge: 5,
+        sMaxAge: 10,
+        staleWhileRevalidate: 60 * 60 * 24 * 365,
     });
 };
  
